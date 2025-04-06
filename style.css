@@ -1,0 +1,322 @@
+/* Reset & Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  
+    /* Fluid background: animated gradient mimicking water flow */
+    background: linear-gradient(
+      135deg,
+      #1f1f1f 0%,
+      #2b2b2b 25%,
+      #333333 50%,
+      #2b2b2b 75%,
+      #1f1f1f 100%
+    );
+    background-size: 400% 400%;
+    animation: waterFlow 12s ease-in-out infinite;
+  
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Simulated texture shimmer effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/waves.png');
+    opacity: 0.02;
+    z-index: -1;
+    pointer-events: none;
+    animation: shimmer 45s linear infinite;
+  }
+  
+  /* 🌊 SVG Wave Background Container */
+  .wave-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+  }
+  
+  .waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: moveWaves 20s linear infinite;
+  }
+  
+  .parallax > use {
+    animation: waveMove 25s linear infinite;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+  }
+  
+  .brand-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* Navigation Menu */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: opacity 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    opacity: 0.6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 0 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-content {
+    text-align: left;
+    width: 50%;
+    padding-top: 180px;
+  }
+  
+  .hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .hero-content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+  }
+  
+  .right-image {
+    width: 50%;
+    height: 100%;
+    background-image: url('assets/profile.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  
+  /* Flowing animated water gradient */
+  @keyframes waterFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Optional soft shimmer overlay (texture) */
+  @keyframes shimmer {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 1000px;
+    }
+  }
+  
+  /* SVG Wave Movement */
+  @keyframes waveMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-160px);
+    }
+  }
+  
+  @keyframes moveWaves {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  /* 🔁 Ripple Canvas Styling */
+  #ripple-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      padding: 40px 20px;
+      height: auto;
+      text-align: center;
+    }
+  
+    .hero-wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .hero-content {
+      width: 100%;
+      padding-top: 100px;
+    }
+  
+    .right-image {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+ 
+ /* 📞 Contact Section Full Page */
+.contact-section {
+  height: 100vh;
+  padding: 100px 60px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Wrapper to control content width */
+.contact-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 📝 Heading aligned left with full underline */
+.contact-heading {
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin-bottom: 200px;
+  position: relative;
+  width: fit-content;
+  margin-left: 0;
+}
+
+.contact-heading::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background-color: #00ff99;
+  margin-top: 10px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* 📍 Button Row */
+.contact-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* 📩 Individual Buttons */
+.contact-button {
+  flex: 1;
+  max-width: 400px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 18px 25px;
+  font-size: 18px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #00ff99;
+  color: black;
+  border-color: #00ff99;
+}
+
+/* 📱 Mobile Fixes */
+@media (max-width: 768px) {
+  .contact-heading {
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  .contact-buttons-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-button {
+    max-width: 100%;
+    width: 100%;
+  }
+}
