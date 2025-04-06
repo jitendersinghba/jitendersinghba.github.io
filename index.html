@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jitender Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ripple Canvas Background -->
+  <canvas id="ripple-canvas"></canvas>
+
+  <!-- 🌊 Animated Multi-Layer Wave Background -->
+  <div class="wave-background">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 24 150 28">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="#2c2c2c" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="#333" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="#2c2c2c" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#1f1f1f" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="brand-text">Code by JS</span>
+    </div>
+    <nav>
+      <ul>
+        <!-- Removed Home -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <h1>Jitender Singh</h1>
+        <h2>Business Analyst</h2>
+      </div>
+      <div class="right-image"></div>
+    </div>
+  </section>
+
+  <!-- 🔁 Ripple Animation Script -->
+  <script>
+    const canvas = document.getElementById("ripple-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.zIndex = "-1";
+    canvas.style.pointerEvents = "none";
+
+    const ripples = [];
+
+    document.addEventListener("mousemove", (e) => {
+      ripples.push({
+        x: e.clientX,
+        y: e.clientY,
+        radius: 0,
+        alpha: 1
+      });
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ripples.forEach((ripple, i) => {
+        ripple.radius += 1.2; // slower expansion
+        ripple.alpha -= 0.008; // smoother fade
+
+        if (ripple.alpha <= 0) {
+          ripples.splice(i, 1);
+        } else {
+          ctx.beginPath();
+          ctx.arc(ripple.x, ripple.y, ripple.radius, 0, 2 * Math.PI, false);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${ripple.alpha})`; // subtle white stroke
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+
+</body>
+</html>
