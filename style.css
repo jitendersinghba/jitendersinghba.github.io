@@ -1,237 +1,302 @@
-/* Reset & Basic Styling */
+/* 🔁 Reset & Base Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-  
-    /* Fluid background: animated gradient mimicking water flow */
-    background: linear-gradient(
-      135deg,
-      #1f1f1f 0%,
-      #2b2b2b 25%,
-      #333333 50%,
-      #2b2b2b 75%,
-      #1f1f1f 100%
-    );
-    background-size: 400% 400%;
-    animation: waterFlow 12s ease-in-out infinite;
-  
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  /* Simulated texture shimmer effect */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('https://www.transparenttextures.com/patterns/waves.png');
-    opacity: 0.02;
-    z-index: -1;
-    pointer-events: none;
-    animation: shimmer 45s linear infinite;
-  }
-  
-  /* 🌊 SVG Wave Background Container */
-  .wave-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -2;
-    overflow: hidden;
-  }
-  
-  .waves {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: moveWaves 20s linear infinite;
-  }
-  
-  .parallax > use {
-    animation: waveMove 25s linear infinite;
-  }
-  
-  /* Navigation Bar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 60px;
-  }
-  
-  .brand-text {
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-family: 'Outfit', sans-serif; 
-    color: white;
-  }
-  
-  /* Navigation Menu */
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    font-size: 14px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-    font-family: 'Outfit', sans-serif; 
-    transition: opacity 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    opacity: 0.6;
-  }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    padding: 0 60px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .hero-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .hero-content {
-    text-align: left;
-    width: 50%;
-    padding-top: 180px;
-  }
-  
-  .hero-content h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
-    font-weight: 400;
-    margin-bottom: 5px;
-    color: white;
-    letter-spacing: 1px;
-  }
-  
-  .right-image {
-    width: 50%;
-    height: 100%;
-    background-image: url('assets/profile.png');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-  }
-  
-  /* Flowing animated water gradient */
-  @keyframes waterFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  /* Optional soft shimmer overlay (texture) */
-  @keyframes shimmer {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 1000px 1000px;
-    }
-  }
-  
-  /* SVG Wave Movement */
-  @keyframes waveMove {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-160px);
-    }
-  }
-  
-  @keyframes moveWaves {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-50%, 0, 0);
-    }
-  }
-  
-  /* 🔁 Ripple Canvas Styling */
-  #ripple-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-  }
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 40px 20px;
-      height: auto;
-      text-align: center;
-    }
-  
-    .hero-wrapper {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .hero-content {
-      width: 100%;
-      padding-top: 100px;
-    }
-  
-    .right-image {
-      width: 100%;
-      height: 300px;
-      background-position: center;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-    }
-  }
- 
- /* 📞 Contact Section Full Page */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #1f1f1f 0%,
+    #2b2b2b 25%,
+    #333333 50%,
+    #2b2b2b 75%,
+    #1f1f1f 100%
+  );
+  background-size: 400% 400%;
+  animation: waterFlow 12s ease-in-out infinite;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🌊 Shimmer Texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://www.transparenttextures.com/patterns/waves.png');
+  opacity: 0.02;
+  z-index: -1;
+  pointer-events: none;
+  animation: shimmer 45s linear infinite;
+}
+
+/* 🌊 SVG Wave Background */
+.wave-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: moveWaves 20s linear infinite;
+}
+
+.parallax > use {
+  animation: waveMove 25s linear infinite;
+}
+
+/* 🔁 Ripple Canvas */
+#ripple-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 🌀 Animations */
+@keyframes waterFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-160px); }
+}
+
+@keyframes moveWaves {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+/* 🧭 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.brand-text {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+}
+
+/* 🔗 Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  font-family: 'Outfit', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+  opacity: 0.6;
+}
+
+/* 🦸 Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 0 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  text-align: left;
+  width: 50%;
+  padding-top: 180px;
+}
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.right-image {
+  width: 50%;
+  height: 100%;
+  background-image: url('assets/profile.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+/* 🧱 About Section - Image Left + Text Right */
+.about-section {
+  background-color: #f9f9f9;
+  color: #1f1f1f;
+  padding: 100px 100px 160px;
+  border-radius: 60px;
+  margin: 60px auto;
+  max-width: 1600px;
+  min-height: 120vh;
+}
+
+.about-layout {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+  height: auto;
+}
+
+/* 🌄 Left-Aligned Image */
+.about-main-image {
+  width: 40%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  align-self: flex-start;
+}
+
+.about-layout > img.about-main-image {
+  height: 100%;
+}
+
+/* 📃 Right-Aligned Text Blocks */
+.about-text-blocks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 150px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+/* 📁 Projects Section */
+.projects-section {
+  padding: 120px 100px;
+  background-color: #f0f0f0;
+  color: #1f1f1f;
+  border-radius: 60px;
+  margin: 60px auto;
+  max-width: 1600px;
+  min-height: 100vh;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 60px;
+}
+
+/* 📦 Project Card Styling */
+.project-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* 🖼️ Image Preview */
+.project-thumb img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 📝 Project Title */
+.project-title {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  padding: 24px 32px;
+  background-color: white;
+}
+
+/* 🔁 More Projects Button */
+.more-projects-wrapper {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.more-projects-button {
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+.more-projects-button:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+/* 📞 Contact Section */
 .contact-section {
   height: 100vh;
   padding: 100px 60px;
@@ -243,14 +308,13 @@
   justify-content: flex-start;
 }
 
-/* Wrapper to control content width */
 .contact-wrapper {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* 📝 Heading aligned left with full underline */
+/* 📝 Contact Heading */
 .contact-heading {
   font-size: 72px;
   font-weight: bold;
@@ -281,7 +345,7 @@
   flex-wrap: nowrap;
 }
 
-/* 📩 Individual Buttons */
+/* 📩 Contact Button */
 .contact-button {
   flex: 1;
   max-width: 400px;
@@ -301,25 +365,6 @@
   background: #00ff99;
   color: black;
   border-color: #00ff99;
-}
-
-/* 📱 Mobile Fixes */
-@media (max-width: 768px) {
-  .contact-heading {
-    text-align: center;
-    margin: 0 auto 40px;
-  }
-
-  .contact-buttons-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .contact-button {
-    max-width: 100%;
-    width: 100%;
-  }
 }
 /* 🌍 Location Tag */
 .location-tag {
@@ -354,7 +399,7 @@
   align-items: center;
   justify-content: center;
   animation: flagPulse 2.5s infinite;
-  overflow: hidden; /* ensures the flag stays perfectly inside the circle */
+  overflow: hidden;
 }
 
 .location-icon img {
@@ -364,20 +409,7 @@
   border-radius: 50%;
 }
 
-/* 🌀 Flag gentle pulse effect */
-@keyframes flagPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-/* 🫧 Entrance fade */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* 🎯 Role Button Styling */
+/* 🎯 Role Button */
 .role-button {
   display: inline-block;
   padding: 12px 30px;
@@ -395,155 +427,22 @@
 }
 
 .role-button:hover {
-  background: #d32f2f; /* Canadian Red */
+  background: #d32f2f;
   color: white;
   border-color: #d32f2f;
 }
 
-/* 🧱 About Section - Image Left + Text Right */
-.about-section {
-  background-color: #f9f9f9;
-  color: #1f1f1f;
-  padding: 100px 100px 160px;
-  border-radius: 60px;
-  margin: 60px auto;
-  max-width: 1600px;
-  min-height: 120vh;
+/* 🌀 Animations */
+@keyframes flagPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-.about-layout {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-
-/* 🌄 Left-Aligned Image */
-.about-main-image {
-  width: 40%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* 📃 Text Content on the Right */
-.about-text-blocks {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.about-text {
-  font-size: 18px;
-  line-height: 1.7;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  background: white;
-  padding: 30px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-/* 📱 Mobile Fix */
-@media (max-width: 768px) {
-  .about-layout {
-    flex-direction: column;
-  }
-
-  .about-main-image {
-    width: 40%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    margin-bottom: 60px;
-  }  
-
-  .about-section {
-    padding: 60px 30px 100px;
-    min-height: auto;
-  }
-
-  .about-text {
-    padding: 20px;
-  }
-}
-
-/* 📁 Projects Section */
-.projects-section {
-  padding: 120px 100px;
-  background-color: #f0f0f0;
-  color: #1f1f1f;
-  border-radius: 60px;
-  margin: 60px auto;
-  max-width: 1600px;
-  min-height: 100vh;
-}
-
-.projects-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 60px;
-}
-
-/* 📦 Individual Project Card */
-.project-card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-}
-
-/* 🖼️ Thumbnail Image */
-.project-thumb img {
-  width: 100%;
-  height: 400px; /* Bigger, consistent image size */
-  object-fit: cover;
-  display: block;
-}
-
-/* 📝 Title Below Image */
-.project-title {
-  font-size: 28px;
-  font-weight: 600;
-  font-family: 'Outfit', sans-serif;
-  text-align: center;
-  padding: 24px 32px;
-  background-color: white;
-}
-
-/* 🔁 More Projects Button */
-.more-projects-wrapper {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.more-projects-button {
-  padding: 14px 36px;
-  border-radius: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  background: transparent;
-  color: #1f1f1f;
-  border: 2px solid #1f1f1f;
-  transition: all 0.3s ease;
-}
-
-.more-projects-button:hover {
-  background-color: #1f1f1f;
-  color: white;
-}
-
 @media (max-width: 768px) {
   /* 🌐 Navbar */
   .navbar {
@@ -580,7 +479,7 @@
 
   .right-image {
     width: 100%;
-    height: 280px;
+    height: 300px;
     background-position: center;
   }
 
@@ -588,25 +487,6 @@
     margin-top: 20px;
     font-size: 16px;
     padding: 10px 24px;
-  }
-
-  /* 📍 Location Tag */
-  .location-tag {
-    top: 20px;
-    left: 20px;
-    padding: 10px 16px;
-    font-size: 12px;
-    flex-direction: row;
-  }
-
-  .location-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .location-icon img {
-    width: 20px;
-    height: 20px;
   }
 
   /* 📄 About Section */
@@ -627,7 +507,7 @@
   }
 
   .about-text-blocks {
-    gap: 30px;
+    gap: 60px;
   }
 
   .about-text {
@@ -681,5 +561,33 @@
     width: 100%;
     font-size: 16px;
     padding: 14px 20px;
+  }
+
+  /* 📍 Location Tag */
+  .location-tag {
+    top: 20px;
+    left: 20px;
+    padding: 10px 16px;
+    font-size: 12px;
+    flex-direction: row;
+  }
+
+  .location-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .location-icon img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 769px) {
+  .about-layout {
+    align-items: stretch;
+  }
+
+  .about-main-image {
+    height: 100%;
   }
 }
