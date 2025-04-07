@@ -210,7 +210,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 150px;
+  gap: 152px;
 }
 
 .about-text {
