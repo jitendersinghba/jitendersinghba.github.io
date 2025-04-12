@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jitender Singh | Business Analyst",
+  icons: {
+    icon: "/favicon.ico", // ✅ standard way browsers look for favicons
+  },
 };
 
 export default function RootLayout({
@@ -22,18 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ backgroundColor: '#2c2c2e'}}>
+    <html lang="en" style={{ backgroundColor: "#2c2c2e" }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ 
-          overflowX: 'hidden', 
-          position: 'relative',
-          backgroundColor: '#5865F2', 
-          minHeight: '100vh',}}
+        style={{
+          overflowX: "hidden",
+          position: "relative",
+          backgroundColor: "#5865F2",
+          minHeight: "100vh",
+        }}
       >
         {children}
       </body>
     </html>
   );
 }
-
