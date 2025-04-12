@@ -1,0 +1,61 @@
+.floatingWrapper {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+.toggleButton {
+  background-color: lightgray;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, 0); // magnetic default
+
+  .line {
+    width: 24px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    background-color: #5B4DDE;
+  }
+}
+
+.menu {
+  margin-top: 20px;
+  background-color: lightgray;
+  border-radius: 12px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+// 🔥 New reusable style for all magnetic nav links
+.menuLink {
+  background: transparent;
+  color: black;;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  padding: 8px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  transform: translate(0, 0); // magnetic reset
+
+  &:hover {
+    background-color: #5a4ccc;
+    color: white;
+  }
+}

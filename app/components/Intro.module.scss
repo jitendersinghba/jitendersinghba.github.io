@@ -1,0 +1,68 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  padding: 100px;
+  background-color: #fafafa;
+  font-family: 'Outfit', sans-serif;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+}
+
+.left {
+  flex: 1;
+  padding-right: 40px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin-right: 250px;
+
+    span {
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+}
+
+.right {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+
+.aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translate(0, 0); // Initial state
+
+  &:hover {
+    background-color: #5865F2;
+    color: white; // ✅ keeps text white on hover
+  }
+}

@@ -1,0 +1,16 @@
+.wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    z-index: 20;
+    margin-bottom: -150px; // Adjust this value to control the overlap with the Contact section
+  }
+  
+  .zipper {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    background-color: #f1f1f1;// match your Contact section background
+    border-radius: 0 0 50% 50%;
+  }
+  

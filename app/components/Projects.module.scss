@@ -1,0 +1,72 @@
+.projects {
+  padding: 100px 80px;
+  margin-bottom: -100px; 
+  background-color: #f1f1f1;
+  font-family: 'Outfit', sans-serif;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.projectItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+  }
+}
+
+.projectName {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-left: 100px;
+}
+
+.projectTool {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  margin-right: 100px;
+}
+
+.moreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.moreButton {
+  padding: 14px 40px;
+  background-color: #f1f1f1;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #2c2c2e;
+    color: #f1f1f1;
+  }
+}
+
+
