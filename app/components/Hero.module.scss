@@ -1,7 +1,6 @@
 .hero {
   height: 100vh;
-  padding: 60px;
-  padding-top: 30px;
+  padding: 60px 40px 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,12 +8,17 @@
   overflow: hidden;
   background: linear-gradient(135deg, #2c2c2e, #3a3a3c);
   color: #f5f5f7;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px 20px;
+  }
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .brandText {
@@ -31,6 +35,10 @@
   gap: 40px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 600px) {
+    gap: 20px;
+  }
 }
 
 .navList li a {
@@ -42,10 +50,10 @@
   font-weight: 300;
   font-family: 'Outfit', sans-serif;
   transition: opacity 0.3s ease;
-}
 
-.navList li a:hover {
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .locationTag {
@@ -60,6 +68,13 @@
   z-index: 10;
   font-family: 'Outfit', sans-serif;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 768px) {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 16px;
+  }
 }
 
 .locationText {
@@ -90,15 +105,9 @@
 }
 
 @keyframes flagPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .heroWrapper {
@@ -107,6 +116,12 @@
   align-items: center;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
 }
 
 .heroContent {
@@ -116,10 +131,21 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-top: 80px;
+    align-items: center;
+    text-align: center;
+  }
+
   h1 {
     font-size: 70px;
     font-weight: 10;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
   }
 }
 
@@ -138,6 +164,12 @@
     background-color: red;
     border-color: red;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: 14px 36px;
+    font-size: 18px;
+  }
 }
 
 .rightImage {
@@ -148,6 +180,12 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+    margin-top: 0;
+  }
 }
 
 /* 💫 Updated marquee */
@@ -159,6 +197,10 @@
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+
+  @media (max-width: 768px) {
+    top: 200px;
+  }
 }
 
 .nameScroller {
@@ -172,7 +214,7 @@
   gap: 4rem;
   white-space: nowrap;
   min-width: 300vw;
-  transform: translateX(0); /* 👈 default position so there's no jump on mount */
+  transform: translateX(0);
 
   h1 {
     display: inline-block;
@@ -181,5 +223,9 @@
     color: white;
     font-family: 'Outfit', sans-serif;
     margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 64px;
+    }
   }
 }
