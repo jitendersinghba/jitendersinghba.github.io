@@ -212,7 +212,8 @@
   pointer-events: none;
 
   @media (max-width: 768px) {
-    top: 100px;
+    position: relative;
+    margin-bottom: 20px;
   }
 }
 
