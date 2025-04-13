@@ -179,9 +179,11 @@
   }
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 18px;
     padding: 14px 36px;
+    z-index: 2;
+    position: relative;
   }
 }
 
@@ -212,8 +214,10 @@
   pointer-events: none;
 
   @media (max-width: 768px) {
-    position: absolute;
-    margin-bottom: 120px;
+    position: relative;
+    top: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
