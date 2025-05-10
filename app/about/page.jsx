@@ -32,7 +32,13 @@ export default function AboutPage() {
 
           <motion.div className={`${styles.sectionBox} mt-10`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }}>
             <div className="flex flex-col md:flex-row items-center gap-8">
-              <Image src="/about-me-image.jpg" alt="About Me" width={0} height={0} sizes="100vw" className="w-[400px] h-auto rounded-xl shadow-md" />
+              <Image 
+                src="/about-me-image.jpg" 
+                alt="About Me" 
+                width={400} 
+                height={500} 
+                className="rounded-xl shadow-md"
+              />
               <p className={styles.paragraph}>
                 But numbers weren't the whole story. I've always been naturally curious, curious about people, decisions, systems, and why things work (or don't). That curiousity led me to philosophy, where I didn't just seek answers but learned to ask better questions. It taught me to think deeply about the underlying structures of ideas, to analyze concepts critically, and to appreciate the complexity of human thought and behavior. This philosophical lens has become integral to how I approach problems, enabling me to navigate ambiguity and uncover insights that aren't immediately apparent.
               </p>
