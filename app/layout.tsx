@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jitender Singh | Business Analyst",
   icons: {
-    icon: "/favicon.ico", // ✅ standard way browsers look for favicons
+    icon: "/favicon.ico",
   },
 };
 

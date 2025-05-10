@@ -1,6 +1,6 @@
 'use client';
 
-import MagneticButton from '../components/MagneticButton'; // ✅
+import MagneticButton from '../components/MagneticButton';
 import styles from './Contact.module.scss';
 
 export default function Contact() {
@@ -32,7 +32,7 @@ export default function Contact() {
           className={styles.button}
           onClick={() =>
             window.open(
-              'https://www.linkedin.com/in/jitender-singh-ba',
+              'https://www.linkedin.com/in/jitender-singh-545147197',
               '_blank'
             )
           }

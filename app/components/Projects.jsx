@@ -41,7 +41,7 @@ export default function Projects() {
       <div className={styles.moreWrapper}>
         <MagneticButton
           className={styles.moreButton}
-          onClick={() => (window.location.href = '/more-projects')}
+          onClick={() => (window.location.href = '/projects')}
         >
           More
         </MagneticButton>

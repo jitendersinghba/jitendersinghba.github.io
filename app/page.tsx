@@ -6,11 +6,10 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import FloatingNav from './components/FloatingNav';
 import ZipperReveal from './components/ZipperReveal';
-import AnimatePresenceWrapper from './components/AnimatePresenceWrapper';
 
 export default function Home() {
   return (
-    <AnimatePresenceWrapper>
+    <>
       <section id="home">
         <Hero />
       </section>
@@ -31,6 +30,6 @@ export default function Home() {
       </section>
 
       <FloatingNav />
-    </AnimatePresenceWrapper>
+    </>
   );
 }

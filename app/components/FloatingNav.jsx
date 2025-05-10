@@ -42,7 +42,7 @@ export default function FloatingNav({ alwaysVisible = false }) {
 
   return (
     <>
-      {(scrolledPastHero || showNav) && ( // ✅ This is the key fix!
+      {(scrolledPastHero || showNav) && (
         <div className={styles.floatingWrapper} ref={menuRef}>
           <MagneticButton
             className={styles.toggleButton}
@@ -78,7 +78,7 @@ export default function FloatingNav({ alwaysVisible = false }) {
                 className={styles.menuLink}
                 onClick={() => {
                   handleNavClick();
-                  document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+                  window.location.href = '/#projects'; // ✅ fixed
                 }}
               >
                 Projects
@@ -88,7 +88,7 @@ export default function FloatingNav({ alwaysVisible = false }) {
                 className={styles.menuLink}
                 onClick={() => {
                   handleNavClick();
-                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                  window.location.href = '/#contact'; // ✅ fixed
                 }}
               >
                 Contact
