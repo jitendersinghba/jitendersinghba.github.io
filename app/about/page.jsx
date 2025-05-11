@@ -3,7 +3,7 @@
 import FloatingNav from '../components/FloatingNav';
 import AnimatePresenceWrapper from '../components/AnimatePresenceWrapper';
 import styles from './About.module.scss';
-import Image from 'next/image';
+import Image from 'next/image';          // ✅ import stays here
 import { motion } from 'framer-motion';
 
 export default function AboutPage() {
@@ -33,10 +33,10 @@ export default function AboutPage() {
           <motion.div className={`${styles.sectionBox} mt-10`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }}>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Image 
-                src="/about-me-image.jpg" 
+                src="/aboutme.jpg" 
                 alt="About Me" 
-                width={400} 
-                height={500} 
+                width={400}                      // ✅ safe width
+                height={500}                     // ✅ safe height
                 className="rounded-xl shadow-md"
               />
               <p className={styles.paragraph}>
