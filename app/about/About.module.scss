@@ -71,23 +71,23 @@
 }
 
 .circleButton {
-  width: 120px;
-  height: 120px;
-  background-color: #3D5A40;
-  color: white;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
   transition: all 0.3s ease;
-  text-align: center;
+  transform: translate(0, 0); // Initial state
 
   &:hover {
-    background-color: #2B4430;
-    transform: scale(1.1);
+    background-color: blue;
+    color: white;
   }
-}
+  }

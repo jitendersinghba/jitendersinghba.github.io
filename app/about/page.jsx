@@ -2,8 +2,9 @@
 
 import FloatingNav from '../components/FloatingNav';
 import AnimatePresenceWrapper from '../components/AnimatePresenceWrapper';
+import MagneticButton from '../components/MagneticButton'; // ✅ Import MagneticButton
 import styles from './About.module.scss';
-import Image from 'next/image';          // ✅ import stays here
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function AboutPage() {
@@ -35,8 +36,8 @@ export default function AboutPage() {
               <Image 
                 src="/aboutme.jpg" 
                 alt="About Me" 
-                width={400}                      // ✅ safe width
-                height={500}                     // ✅ safe height
+                width={400} 
+                height={500} 
                 className="rounded-xl shadow-md"
               />
               <p className={styles.paragraph}>
@@ -91,7 +92,12 @@ export default function AboutPage() {
               Outside of work, I like chess, riding bikes, and exploring the world of finance. I also enjoy being out in nature, the open air, the fields, animals, and the quiet feeling of being surrounded by something real. If you want to check out some of the work I've done, just click the Projects button below.
             </p>
             <div className={styles.projectsButtonWrapper}>
-              <a href="/#projects" className={styles.circleButton}>Projects</a>
+              <MagneticButton
+                className={styles.circleButton}
+                onClick={() => window.location.href = '/#projects'}
+              >
+                Projects
+              </MagneticButton>
             </div>
           </motion.div>
         </main>
