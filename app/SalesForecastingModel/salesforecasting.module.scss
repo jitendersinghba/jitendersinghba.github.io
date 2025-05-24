@@ -422,6 +422,20 @@
       padding: 0.55em 1.2em;
       border-radius: 18px;
     }
+
+    // ---- TABLE MOBILE SCROLL FIX ----
+    .metricsTable,
+    .usageTable {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      th, td {
+        min-width: 130px;
+        font-size: 0.97rem;
+        padding: 0.65em 0.7em;
+      }
+    }
   }
 
   // Ultra mobile (smallest screens)
@@ -433,6 +447,15 @@
     }
     .footerNav {
       margin-bottom: 1.2rem;
+    }
+    // ---- TABLE MOBILE SCROLL FIX ----
+    .metricsTable,
+    .usageTable {
+      th, td {
+        min-width: 110px;
+        font-size: 0.90rem;
+        padding: 0.51em 0.4em;
+      }
     }
   }
 }
