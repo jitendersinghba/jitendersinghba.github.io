@@ -1,8 +1,8 @@
 .salesForecastingPage {
   min-height: 100vh;
   width: 100vw;
-  background: #c1bcc5;
-  color: #1b2233;
+  background: #292e27;
+  color: #f1f7f3;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -32,35 +32,144 @@
     .subtitle {
       font-size: 20px;
       text-align: left;
-      color: #425073;
+      color: #eff7f2;
       margin-bottom: 1.2rem;
       font-weight: 500;
     }
     margin-bottom: 2.2rem;
   }
 
-  .summarySection {
-    background: #2475b2;
-    color: #fff;
-    padding: 1.6rem 2.4rem;
-    border-radius: 24px;
-    box-shadow: 0 4px 18px rgba(130, 150, 200, 0.07);
-    margin-bottom: 2.2rem;
-    font-size: 20px;
-    text-align: center;
+  // ---- NEW SECTIONS ----
+
+  .execSummarySection {
+    background: #a7b2b6;
+    color: #2d2d1b;
+    padding: 1.7rem 2.3rem;
+    border-radius: 22px;
+    box-shadow: 0 3px 13px rgba(130, 120, 70, 0.07);
+    margin-bottom: 2.1rem;
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #272625;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+    p {
+      font-size: 1.14rem;
+      color: #282623;
+    }
   }
+
+  .contextSection {
+    background: #a7b2b6;
+    color: #131415;
+    padding: 1.7rem 2.3rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 13px rgba(34, 54, 72, 0.06);
+    margin-bottom: 2.1rem;
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1c1e20;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.08rem;
+      color: #161819;
+    }
+  }
+
+  .dataSection {
+    background: #a7b2b6;
+    color: #1a1d1c;
+    padding: 1.5rem 2.3rem;
+    border-radius: 18px;
+    box-shadow: 0 3px 13px rgba(44, 110, 91, 0.06);
+    margin-bottom: 2.1rem;
+    h2 {
+      font-size: 27px;
+      font-weight: 500;
+      color: #111313;
+      margin-bottom: 0.45rem;
+    }
+    p {
+      font-size: 1.07rem;
+      color: #131515;
+    }
+  }
+
+  .implementationSection {
+    background: #f8f7fe;
+    color: #273360;
+    padding: 1.5rem 2.3rem;
+    border-radius: 18px;
+    box-shadow: 0 3px 13px rgba(72, 66, 166, 0.06);
+    margin-bottom: 2.1rem;
+    h2 {
+      font-size: 27px;
+      font-weight: 500;
+      color: #2e25a3;
+      margin-bottom: 0.45rem;
+    }
+    p {
+      font-size: 1.07rem;
+      color: #413c6c;
+    }
+  }
+
+  .stakeholderSection {
+    background: #e9f8fb;
+    color: #254250;
+    padding: 1.4rem 2.1rem;
+    border-radius: 17px;
+    box-shadow: 0 3px 13px rgba(45, 92, 117, 0.06);
+    margin-bottom: 2.1rem;
+    h2 {
+      font-size: 27px;
+      font-weight: 500;
+      color: #157faa;
+      margin-bottom: 0.45rem;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #186e95;
+    }
+  }
+
+  .lessonsSection {
+    background: #fff7f9;
+    color: #692436;
+    padding: 1.3rem 2.0rem;
+    border-radius: 16px;
+    box-shadow: 0 3px 13px rgba(166, 59, 85, 0.05);
+    margin-bottom: 2.3rem;
+    h2 {
+      font-size: 27px;
+      font-weight: 500;
+      color: #b92554;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #7a2b46;
+    }
+  }
+
+  // ---- EXISTING SECTIONS UNCHANGED ----
+
 
   .impactSection {
     margin-bottom: 2.2rem;
     h2 {
       font-size: 30px;
       font-weight: 500;
-      color: #f02a41;
+      color: #f6f1f2;
       margin-bottom: 0.7rem;
     }
     p {
       font-size: 1.14rem;
-      color: #32406e;
+      color: #f2f3f6;
       margin-bottom: 0.9rem;
     }
   }
@@ -369,7 +478,6 @@
 
       &:hover, &:focus {
         box-shadow: 0 8px 32px rgba(56,249,215,0.22);
-        // JS will handle the actual magnetic movement
       }
     }
   }
@@ -382,7 +490,9 @@
     }
     .hero h1 { font-size: 2.2rem; }
     .hero .subtitle { font-size: 1.1rem; }
-    .summarySection, .impactSection, .analysisSection {
+    .summarySection, .impactSection, .analysisSection,
+    .execSummarySection, .contextSection, .dataSection,
+    .implementationSection, .stakeholderSection, .lessonsSection {
       padding: 1rem 0.7rem;
       font-size: 1rem;
       border-radius: 14px;
@@ -392,7 +502,13 @@
     .visuals h2,
     .tablesSection h2,
     .metricsSection h2,
-    .analysisSection h2 {
+    .analysisSection h2,
+    .execSummarySection h2,
+    .contextSection h2,
+    .dataSection h2,
+    .implementationSection h2,
+    .stakeholderSection h2,
+    .lessonsSection h2 {
       font-size: 1.4rem;
       margin-bottom: 0.7rem;
     }
@@ -422,7 +538,6 @@
       padding: 0.55em 1.2em;
       border-radius: 18px;
     }
-
     // ---- TABLE MOBILE SCROLL FIX ----
     .metricsTable,
     .usageTable {
@@ -447,6 +562,11 @@
     }
     .footerNav {
       margin-bottom: 1.2rem;
+    }
+    .execSummarySection, .contextSection, .dataSection,
+    .implementationSection, .stakeholderSection, .lessonsSection {
+      padding: 0.7rem 0.15rem;
+      border-radius: 9px;
     }
     // ---- TABLE MOBILE SCROLL FIX ----
     .metricsTable,

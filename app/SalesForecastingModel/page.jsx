@@ -9,6 +9,7 @@ export default function SalesForecasting() {
       <FloatingNav alwaysVisible={true} />
       <section className={styles.salesForecastingPage}>
         <div className={styles.narrowContent}>
+          
           {/* Executive Summary */}
           <header className={styles.hero}>
             <h1>Sales Forecasting Models<br />Excel, SARIMA, and Prophet</h1>
@@ -16,15 +17,29 @@ export default function SalesForecasting() {
               Smarter inventory, fewer lost sales, and greater agility in planning
             </p>
           </header>
-
-          {/* Project Overview */}
-          <div className={styles.summarySection}>
+          <section className={styles.execSummarySection}>
+            <h2>Executive Summary</h2>
             <p>
-              This project examines three widely used forecasting models, Excel Forecasting, SARIMA, and Prophet. I applied them to Walmart's weekly sales data (from a Kaggle demo dataset). Each model was selected for its distinct approach to forecasting. Excel for its accessibility and simplicity, SARIMA for capturing seasonality and trends, and Prophet for its flexibility and ability to handle real-world business complexities.<br />
-              By comparing these models side by side, the analysis highlights how different forecasting techniques can meet a range of business needs, from rapid scenario checks to long-term, data-driven planning. The findings not only illustrate each model's unique strengths and limitations, but also underscore the value of aligning analytics solutions with the specific goals and challenges of the organization.<br />
-              Ultimately, this project aims to help business leaders and analysts make more informed choices about which forecasting approach best supports strategic decision-making and operational effectiveness.
+            This project was driven by a simple curiosity of how close can I get to perfect sales predictions, regardless of the tools and techniques used? In a retail world where every company develops its own tailored forecasting systems, often using proprietary data and complex models, I wanted to put widely acccessible, generic approaches to the test. <br /><br /> Using a demo Walmart sales data, I compared three common forecasting methods, Excel, SARIMA, and Prophet, each representing a different level of sophistication and accessibility in the industry. While some companies invest in custom-built, highly specialized solutions, most still rely on off-the-shelf or open-source tools, aiming for the best possible accuracy with reasonable effort.
+            <br /><br /> My goal was clear: predict sales as accurately as possible using demo data, benchmark their performance, and cut through the noise about which approach actually delivers. While it's true that more advanced, niche models exist, the reality is that most organizations weigh effort against accuracy, and in practice, everyone is looking for the sweet spot. This project not only measures what's possible with common forecasting tools but also clarifies when and why you might push for something more advanced.
             </p>
-          </div>
+          </section>
+          
+          {/* Business Problem / Context */}
+          <section className={styles.contextSection}>
+            <h2>Business Problem & Context</h2>
+            <p>
+              For large retailers, inaccurate sales forecasts can lead to millions in lost revenue through excess inventory, stockouts, and missed demand spikes. For example, running out of stock before a major sales event like Black Friday can directly impact customer satisfaction and long-term loyalty. This project addresses a core challenge faced by retail business leaders: how to select the right forecasting approach to balance speed, accuracy, and business needs in a high-stakes environment.
+            </p>
+          </section>
+          
+          {/* Data Understanding & Preparation */}
+          <section className={styles.dataSection}>
+            <h2>Data Understanding & Preparation</h2>
+            <p>
+              The dataset was sourced from a Kaggle Walmart weekly sales demo and included multiple years of sales data across various stores. Data preparation steps involved handling missing values, filtering out extreme outliers (such as sudden zero-sales weeks), and aligning time periods for fair comparison. I used basic business logic to fill small gaps, such as carrying forward last known sales, to maintain a realistic forecasting scenario similar to what a business would face in production.
+            </p>
+          </section>
 
           {/* Why Sales Forecasting Matters */}
           <section className={styles.impactSection}>
@@ -153,7 +168,7 @@ export default function SalesForecasting() {
                 </tr>
                 <tr>
                   <td>Prophet</td>
-                  <td>Most accurate, robust</td>
+                  <td>Most accurate, versatile</td>
                   <td>Business-critical forecasting</td>
                   <td>4.05%</td>
                 </tr>
@@ -172,6 +187,30 @@ export default function SalesForecasting() {
               Prophet stands out for its flexibility and ability to handle a variety of real-world data challenges, including missing values, abrupt trend changes, and multiple seasonalities (for example, weekly, monthly, and holiday effects at the same time). In this analysis, Prophet produced the most accurate forecasts, as shown by its lower error rate, making it well-suited for operational planning and business-critical decisions.
               <br /><br />
               Each model adds value depending on the business question at hand. For day-to-day operations and tactical planning, Prophet provides detailed and reliable insights that help teams optimize inventory and respond quickly to market shifts. SARIMA remains valuable where stable, seasonal patterns drive sales, and Excel is always available for quick checks or when results need to be explained to a broad audience. Using a combination of these models ensures both speed and accuracy, empowering organizations to act confidently on their data.
+            </p>
+          </section>
+
+          {/* Implementation & Next Steps */}
+          <section className={styles.implementationSection}>
+            <h2>Implementation & Next Steps</h2>
+            <p>
+              To operationalize the most effective forecasting approach, I recommend integrating Prophet into existing reporting workflows for weekly or monthly planning, with Excel as a backup for rapid checks. This could be rolled out as an automated dashboard for business managers and planners, updated as new sales data becomes available. Future improvements could involve incorporating promotional calendars, holiday events, and additional sales drivers for even more robust forecasting.
+            </p>
+          </section>
+
+          {/* Stakeholder Communication */}
+          <section className={styles.stakeholderSection}>
+            <h2>Stakeholder Communication</h2>
+            <p>
+              To maximize adoption, I designed outputs tailored to different audiences: interactive dashboards and charts for executives and finance, and simple actionable reports for store managers. I also documented the process in a way that enables both technical and non-technical stakeholders to understand, trust, and act on the forecasts.
+            </p>
+          </section>
+
+          {/* Lessons Learned / Challenges */}
+          <section className={styles.lessonsSection}>
+            <h2>Lessons Learned & Challenges</h2>
+            <p>
+              The biggest challenge was handling irregularities in the sales data and tuning advanced models like SARIMA for stability. I learned that real-world business forecasting isn’t just about finding the “best” model—it’s about aligning analytics with business context, data realities, and clear stakeholder communication.
             </p>
           </section>
 
