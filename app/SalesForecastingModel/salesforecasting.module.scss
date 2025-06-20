@@ -126,7 +126,7 @@
         box-shadow: 0 3px 13px rgba(120,140,180,0.06);
         padding: 1.15rem 1.2rem;
         h3 {
-          font-size: 1.15rem;
+          font-size: 25px;
           font-weight: 700;
           color: rgb(19, 19, 19);
           margin-bottom: 0.5rem;
@@ -137,9 +137,9 @@
           margin-bottom: 0.3rem;
         }
       }
-      .modelBlock:nth-child(1) { background: #e8d266; }
-      .modelBlock:nth-child(2) { background: #71ed80; }
-      .modelBlock:nth-child(3) { background: #ed90a7; }
+      .modelBlock:nth-child(1) { background: whitesmoke; }
+      .modelBlock:nth-child(2) { background: whitesmoke; }
+      .modelBlock:nth-child(3) { background: whitesmoke; }
     }
   }
 
