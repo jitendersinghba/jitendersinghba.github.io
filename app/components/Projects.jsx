@@ -12,7 +12,7 @@ const projects = [
   },
   {
     name: 'Executive KPI Dashboard',
-    tool: 'Power BI',
+    tool: 'Tableau',
     link: '/KPI_Dashboard', // You can change this later
   },
   {
