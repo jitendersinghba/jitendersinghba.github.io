@@ -13,7 +13,7 @@ const projects = [
   {
     name: 'Executive KPI Dashboard',
     tool: 'Power BI',
-    link: '/projects', // You can change this later
+    link: '/KPI_Dashboard', // You can change this later
   },
   {
     name: 'Customer Segmentation & Retention Analysis',

@@ -1,0 +1,47 @@
+.kpiDashboardPage {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.narrowContent {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  margin-bottom: 48px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #666;
+  }
+}
+
+.footerNav {
+  display: flex;
+  margin-top: 60px;
+}
+
+.magneticBtn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
