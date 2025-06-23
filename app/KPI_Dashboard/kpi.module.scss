@@ -26,6 +26,7 @@
     font-size: 80px;
     font-weight: 100;
     margin-bottom: 16px;
+    color: #181818; // dark text
     @media (max-width: 600px) {
       font-size: 2rem;
     }
@@ -34,7 +35,7 @@
   .subtitle {
     font-size: 1.25rem;
     font-weight: 400;
-    color: #666;
+    color: #232323; // dark gray
     @media (max-width: 600px) {
       font-size: 1rem;
     }
@@ -47,7 +48,7 @@
   width: 100%;
   p {
     font-size: 1.12rem;
-    color: #252525;
+    color: #181818; // dark text
     line-height: 1.7;
     text-align: center;
     margin: 0;
@@ -72,8 +73,9 @@
       font-size: 1.05rem;
       margin-bottom: 16px;
       line-height: 1.6;
+      color: #232323; // dark
       strong {
-        color: #212121;
+        color: #181818;
         font-weight: 600;
       }
       @media (max-width: 600px) {
@@ -88,8 +90,8 @@
   font-size: 60px;
   font-weight: 100;
   margin-top: 60px;
-  margin-bottom: 60px;
-  color: #232323;
+  margin-bottom: 30px;
+  color: #181818; // dark text
   letter-spacing: 0.01em;
   text-align: left;
   width: 100%;
@@ -134,9 +136,13 @@
   p {
     font-size: 1.12rem;
     line-height: 1.7;
-    color: #29343b;
+    color: #181818; // dark text
     @media (max-width: 600px) {
       font-size: 1rem;
+    }
+    strong {
+      color: #1769aa;
+      font-weight: 700;
     }
   }
 }
@@ -150,7 +156,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  padding: 16px 0;    // Only vertical padding
+  padding: 16px 0;
   margin: 48px 0 0 0;
   min-height: 600px;
   position: relative;
