@@ -6,29 +6,29 @@ import styles from './Projects.module.scss';
 
 const projects = [
   {
-    name: 'Sales Forecasting & Business Trend Model',
-    tool: 'Python, Excel',
-    link: '/SalesForecastingModel', // Direct link to your custom page
+    name: 'Requirements Traceability Matrix',
+    tool: 'Confluence, Excel',
+    link: '/RequirementsTraceabilityMatrix', // You can change this later
   },
   {
-    name: 'Executive KPI Dashboard',
-    tool: 'Tableau',
-    link: '/KPI_Dashboard', // You can change this later
-  },
-  {
-    name: 'Customer Segmentation & Retention Analysis',
-    tool: 'SQL, Python',
-    link: '/projects', // You can change this later
-  },
-  {
-    name: 'Business Process Mapping & Optimization',
+    name: 'Process Flow Diagram',
     tool: 'Lucidchart, Excel',
     link: '/projects', // You can change this later
   },
   {
-    name: 'Agile Sprint Tracker & Requirements Breakdown',
+    name: 'Agile Sprint Tracker & User Stories',
     tool: 'JIRA, Confluence, Excel',
     link: '/projects', // You can change this later
+  },
+   {
+    name: 'Sales Forecasting & Business Trend Model',
+    tool: 'Python, Excel',
+    link: '/SalesForecastingModel', // Direct link to your custom page
+  },
+   {
+    name: 'Executive KPI Dashboard',
+    tool: 'Tableau',
+    link: '/KPI_Dashboard', // You can change this later
   },
 ];
 
