@@ -1,0 +1,126 @@
+/* Page shell */
+.page {
+  min-height: 100vh;   /* full screen height */
+  width: 100vw;        /* full screen width */
+  background: #f7f1e1; /* soft cream */
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0;          /* remove page padding so background reaches edges */
+}
+
+/* Full-width container */
+.container {
+  width: 100%;
+  padding: 24px; /* spacing inside, not margins */
+}
+
+/* Typography */
+.container h1,
+.container h2 {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0 0 12px 0;
+}
+
+.container h1 {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.15;
+  color: #1e3a8a; /* blue */
+  font-weight: 800;
+}
+
+.container h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  color: #3b3f46; /* dark silver / slate */
+  font-weight: 700;
+}
+
+.container p,
+.container li {
+  color: #2b2b2b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 36px;
+}
+
+/* Meta grid */
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metaBox {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(30, 58, 138, 0.25);
+  border-radius: 16px;
+  padding: 16px 18px;
+  backdrop-filter: blur(2px);
+}
+
+.metaLabel {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 4px 0;
+}
+
+.metaValue {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Lists */
+.list {
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.listTight {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+
+  li {
+    margin-bottom: 6px;
+  }
+}
+
+/* Iframe */
+.iframeWrapper {
+  width: 100%;
+  height: 80vh; /* large iframe */
+  border: 2px solid #c9c9c9;
+  border-radius: 0; /* flush with screen edges */
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  .container {
+    padding: 16px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .iframeWrapper {
+    height: 70vh;
+  }
+}

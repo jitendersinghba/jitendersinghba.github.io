@@ -7,7 +7,7 @@ import styles from './Projects.module.scss';
 const projects = [
   {
     name: 'Requirements Traceability Matrix',
-    tool: 'Confluence, Excel',
+    tool: 'Excel, Google Sheets',
     link: '/RequirementsTraceabilityMatrix', // You can change this later
   },
   {
