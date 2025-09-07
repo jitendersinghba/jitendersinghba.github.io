@@ -21,12 +21,12 @@ const projects = [
     link: '/projects', // You can change this later
   },
    {
-    name: 'Sales Forecasting & Business Trend Model',
+    name: 'Sales Forecasting Model',
     tool: 'Python, Excel',
     link: '/SalesForecastingModel', // Direct link to your custom page
   },
    {
-    name: 'Executive KPI Dashboard',
+    name: 'KPI Dashboard',
     tool: 'Tableau',
     link: '/KPI_Dashboard', // You can change this later
   },
