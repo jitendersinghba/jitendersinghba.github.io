@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jitender Singh | Business Analyst",
+  title: "Jitender S. | Web Analyst",
   icons: {
     icon: "/favicon.ico",
   },
@@ -35,6 +35,7 @@ export default function RootLayout({
           minHeight: "100vh",
         }}
       >
+        {/* ✅ Page content */}
         {children}
       </body>
     </html>

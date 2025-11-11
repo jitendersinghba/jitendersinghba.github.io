@@ -62,6 +62,12 @@
   }
 }
 
+/* ✅ Updated nav anchor to point to #services */
+.navList li a[href="#services"] {
+  font-weight: 400;
+  color: #f5f5f7;
+}
+
 .locationTag {
   display: flex;
   align-items: center;

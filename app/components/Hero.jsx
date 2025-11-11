@@ -61,7 +61,7 @@ export default function Hero() {
         <nav>
           <ul className={styles.navList}>
             <li><Link href="/about">About</Link></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li> {/* ✅ Updated from #projects */}
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -95,14 +95,8 @@ export default function Hero() {
 
           <MagneticButton
             className={styles.roleButton}
-            onClick={() =>
-              window.open(
-                'https://www.iiba.org/professional-development/career-centre/what-is-business-analysis/',
-                '_blank'
-              )
-            }
           >
-            Business Analyst
+            Web Analytics Specialist
           </MagneticButton>
         </div>
         <div className={styles.rightImage}></div>

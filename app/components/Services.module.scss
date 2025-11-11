@@ -1,4 +1,4 @@
-.projects {
+.services {
   padding: 100px 80px;
   margin-bottom: -100px;
   background-color: #D3BE95;
@@ -22,13 +22,13 @@
   }
 }
 
-.projectList {
+.serviceList {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.projectItem {
+.serviceItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +48,7 @@
   }
 }
 
-.projectName {
+.serviceName {
   font-size: 40px;
   font-weight: 500;
   color: #1a1a1a;
@@ -60,7 +60,7 @@
   }
 }
 
-.projectTool {
+.serviceTool {
   font-size: 18px;
   font-weight: 400;
   color: #555;

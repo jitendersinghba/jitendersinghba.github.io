@@ -11,7 +11,7 @@ export default function Intro() {
     <section className={styles.intro}>
       <div className={styles.left}>
         <h1>
-          Helping businesses understand what works, what doesn't, and how to fix it. So they can grow with clarity and confidence.
+          Tracking what matters, fixing what’s broken, and helping businesses understand where their marketing is actually working and where it’s not.
         </h1>
       </div>
       <div className={styles.right}>

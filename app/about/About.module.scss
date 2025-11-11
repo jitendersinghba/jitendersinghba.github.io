@@ -3,11 +3,20 @@
   min-height: 100vh;
 }
 
+/* 🎯 Hero Heading — plum graphite gradient (premium + neutral) */
 .heroHeading {
   font-size: 6rem;
   text-align: left;
-  line-height: 1;
+  line-height: 1.05;
   margin-left: 60px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+
+  /* 🍇 Muted plum graphite gradient */
+  background: linear-gradient(90deg, #2b1e2e, #3a2f40, #4b3c50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   @media (max-width: 768px) {
     font-size: 2.5rem;
     margin-left: 10px;
@@ -17,25 +26,34 @@
 .sectionBox {
   background-color: transparent;
   padding: 1rem 1.5rem;
+
   @media (max-width: 768px) {
     padding: 0.7rem 0.5rem;
   }
 }
 
+/* 🎯 Section Headings — same plum graphite tone */
 .sectionHeading {
   font-size: 4rem;
-  line-height: 1.2;
+  line-height: 1.25;
   text-align: center;
   margin-bottom: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+
+  background: linear-gradient(90deg, #2b1e2e, #3a2f40, #4b3c50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   @media (max-width: 768px) {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
 }
 
-/* Keeps the last sectionHeading center-aligned for consistency */
 .sectionBox:last-of-type .sectionHeading {
   text-align: center;
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
@@ -47,12 +65,15 @@
   color: #333333;
   text-align: center;
   margin-bottom: 1.5rem;
+  font-weight: 300;
+
   @media (max-width: 768px) {
     font-size: 1rem;
     line-height: 1.6;
     padding-left: 0.2em;
     padding-right: 0.2em;
   }
+
   &.italic {
     font-style: italic;
     text-align: left;
@@ -63,11 +84,13 @@
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+
   @media (max-width: 768px) {
     margin-top: 1.2rem;
   }
 }
 
+/* 🎯 Button — cohesive with heading tone */
 .circleButton {
   display: flex;
   justify-content: center;
@@ -78,14 +101,16 @@
   color: white;
   border-radius: 50%;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+
   &:hover {
-    background-color: blue;
+    background: linear-gradient(90deg, #2b1e2e, #3a2f40, #4b3c50);
     color: white;
   }
+
   @media (max-width: 768px) {
     width: 80px;
     height: 80px;

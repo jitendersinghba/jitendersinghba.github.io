@@ -2,7 +2,7 @@
 
 import Hero from './components/Hero';
 import Intro from './components/Intro';
-import Projects from './components/Projects';
+import Projects from './components/Services';
 import Contact from './components/Contact';
 import FloatingNav from './components/FloatingNav';
 import ZipperReveal from './components/ZipperReveal';

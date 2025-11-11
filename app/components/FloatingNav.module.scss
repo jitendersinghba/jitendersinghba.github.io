@@ -40,10 +40,10 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-// 🔥 New reusable style for all magnetic nav links
+// 🔥 Reusable style for all magnetic nav links
 .menuLink {
   background: transparent;
-  color: black;;
+  color: black;
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -58,4 +58,25 @@
     background-color: gray;
     color: white;
   }
+}
+
+// ✅ Optional explicit link variations (useful if styling differs later)
+.menuLinkHome {
+  @extend .menuLink;
+  // link: '/' // Home
+}
+
+.menuLinkAbout {
+  @extend .menuLink;
+  // link: '/about' // About
+}
+
+.menuLinkServices {
+  @extend .menuLink;
+  // link: '/#services' // Services (updated from /#projects)
+}
+
+.menuLinkContact {
+  @extend .menuLink;
+  // link: '/#contact' // Contact
 }

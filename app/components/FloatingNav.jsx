@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import MagneticButton from '../components/MagneticButton';
+import MagneticButton from './MagneticButton';
 import styles from './FloatingNav.module.scss';
 
 export default function FloatingNav({ alwaysVisible = false }) {
@@ -78,17 +78,17 @@ export default function FloatingNav({ alwaysVisible = false }) {
                 className={styles.menuLink}
                 onClick={() => {
                   handleNavClick();
-                  window.location.href = '/#projects'; // ✅ fixed
+                  window.location.href = '/#services'; // ✅ updated from /#projects
                 }}
               >
-                Projects
+                Services
               </MagneticButton>
 
               <MagneticButton
                 className={styles.menuLink}
                 onClick={() => {
                   handleNavClick();
-                  window.location.href = '/#contact'; // ✅ fixed
+                  window.location.href = '/#contact'; // ✅ stays the same
                 }}
               >
                 Contact
