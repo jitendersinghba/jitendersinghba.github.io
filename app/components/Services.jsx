@@ -34,7 +34,7 @@ const services = [
 
 export default function Services() {
   return (
-    // ✅ Added id="services" so anchor links (#services) work again
+    // ✅ Keeps #services anchor functional
     <section id="services" className={styles.services}>
       <div className={styles.serviceList}>
         {services.map((service, index) => (
@@ -47,14 +47,6 @@ export default function Services() {
             <div className={styles.serviceTool}>{service.tool}</div>
           </div>
         ))}
-      </div>
-      <div className={styles.moreWrapper}>
-        <MagneticButton
-          className={styles.moreButton}
-          onClick={() => (window.location.href = '/services')}
-        >
-          More
-        </MagneticButton>
       </div>
     </section>
   );
