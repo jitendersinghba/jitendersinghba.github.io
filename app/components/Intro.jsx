@@ -11,7 +11,7 @@ export default function Intro() {
     <section className={styles.intro}>
       <div className={styles.left}>
         <h1>
-          Tracking what matters, fixing what’s broken, and helping businesses understand where their marketing is actually working and where it’s not.
+          I love sales because I care about people, and this is why I sell solutions, not products. Wanna know the real meaning of the word "Sales"? <br></br>Get in touch :)
         </h1>
       </div>
       <div className={styles.right}>

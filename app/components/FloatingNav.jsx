@@ -54,44 +54,29 @@ export default function FloatingNav({ alwaysVisible = false }) {
 
           {showNav && (
             <div className={styles.menu}>
-              <MagneticButton
-                className={styles.menuLink}
-                onClick={() => {
-                  handleNavClick();
-                  window.location.href = '/';
-                }}
-              >
-                Home
+              <MagneticButton className={styles.menuLink} onClick={handleNavClick}>
+                <a href="/#" style={{ color: 'inherit', textDecoration: 'none', display: 'block', width: '100%' }}>
+                  Home
+                </a>
               </MagneticButton>
 
-              <MagneticButton
-                className={styles.menuLink}
-                onClick={() => {
-                  handleNavClick();
-                  window.location.href = '/about';
-                }}
-              >
-                About
+              <MagneticButton className={styles.menuLink} onClick={handleNavClick}>
+                <a href="/about" style={{ color: 'inherit', textDecoration: 'none', display: 'block', width: '100%' }}>
+                  About
+                </a>
               </MagneticButton>
 
-              <MagneticButton
-                className={styles.menuLink}
-                onClick={() => {
-                  handleNavClick();
-                  window.location.href = '/#services'; // ✅ updated from /#projects
-                }}
-              >
-                Services
+              <MagneticButton className={styles.menuLink} onClick={handleNavClick}>
+                {/* ✅ Simple HTML anchor that links seamlessly with the page ID */}
+                <a href="/#philosophy" style={{ color: 'inherit', textDecoration: 'none', display: 'block', width: '100%' }}>
+                  My Philosophy
+                </a>
               </MagneticButton>
 
-              <MagneticButton
-                className={styles.menuLink}
-                onClick={() => {
-                  handleNavClick();
-                  window.location.href = '/#contact'; // ✅ stays the same
-                }}
-              >
-                Contact
+              <MagneticButton className={styles.menuLink} onClick={handleNavClick}>
+                <a href="/#contact" style={{ color: 'inherit', textDecoration: 'none', display: 'block', width: '100%' }}>
+                  Contact
+                </a>
               </MagneticButton>
             </div>
           )}

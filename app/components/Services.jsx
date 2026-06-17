@@ -6,35 +6,25 @@ import styles from './Services.module.scss';
 
 const services = [
   {
-    name: 'Analytics Setup & Implementation',
-    tool: 'Google Analytics 4, GTM, Google Ads, Meta Pixel',
-    // link: '/your-link-here' // Add link for this service later
+    name: 'Radical Honesty',
+    tool: ['If a solution isn\'t the right fit, I will be the first to tell you.'],
   },
   {
-    name: 'Tag Auditing & Troubleshooting',
-    tool: 'GTM Preview, GA4 DebugView, Tag Assistant',
-    // link: '/your-link-here' // Add link for this service later
+    name: 'Relationships First',
+    tool: ['I am building relationships that will last a lifetime.'],
   },
   {
-    name: 'Dashboard Creation & Reporting',
-    tool: 'Looker Studio, Google Sheets, GA4, Power BI',
-    // link: '/your-link-here' // Add link for this service later
+    name: 'Actually Helping You',
+    tool: ['I look for your actual problems and bring real solutions.'],
   },
   {
-    name: 'Funnel & Conversion Analysis',
-    tool: 'GA4 Explorer, Looker Studio, Hotjar, Microsoft Clarity',
-    // link: '/your-link-here' // Add link for this service later
-  },
-  {
-    name: 'CRO & UX Improvement',
-    tool: 'GA4, Hotjar, Google Optimize, Google Lighthouse',
-    // link: '/your-link-here' // Add link for this service later
+    name: 'Straightforward Value',
+    tool: ['No pitches or pressure, just pure value.'],
   },
 ];
 
 export default function Services() {
   return (
-    // ✅ Keeps #services anchor functional
     <section id="services" className={styles.services}>
       <div className={styles.serviceList}>
         {services.map((service, index) => (
@@ -44,7 +34,14 @@ export default function Services() {
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
             <div className={styles.serviceName}>{service.name}</div>
-            <div className={styles.serviceTool}>{service.tool}</div>
+            <div className={styles.serviceTool}>
+              {service.tool.map((line, lineIndex) => (
+                <span key={lineIndex}>
+                  {line}
+                  {lineIndex < service.tool.length - 1 && <br />}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

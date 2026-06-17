@@ -27,7 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ backgroundColor: "#2c2c2e" }}>
-      {/* ✅ Google Tag Manager Script (in head) */}
       <Script id="gtm-script" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -39,13 +38,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{
-          overflowX: "hidden",
+          overflowX: "hidden", // Restored back to your working setup
           position: "relative",
-          backgroundColor: "#5865F2",
+          backgroundColor: "#2c2c2e", 
           minHeight: "100vh",
         }}
       >
-        {/* ✅ Google Tag Manager (noscript fallback) */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
@@ -55,7 +53,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ Page content */}
         {children}
       </body>
     </html>

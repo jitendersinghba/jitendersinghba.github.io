@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import Link from 'next/link';
-import MagneticButton from '../components/MagneticButton'; // ✅ Add this line
+import MagneticButton from '../components/MagneticButton'; 
 import styles from './Hero.module.scss';
 
 export default function Hero() {
@@ -61,7 +61,8 @@ export default function Hero() {
         <nav>
           <ul className={styles.navList}>
             <li><Link href="/about">About</Link></li>
-            <li><a href="#services">Services</a></li> {/* ✅ Updated from #projects */}
+            {/* ✅ Fixed: Changed from #services to #philosophy */}
+            <li><a href="#philosophy">My Philosophy</a></li> 
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -94,9 +95,9 @@ export default function Hero() {
           </div>
 
           <MagneticButton
-            className={styles.roleButton}
+            className={styles.roleButton} 
           >
-            Web Analytics Specialist
+            Sales Development Representative
           </MagneticButton>
         </div>
         <div className={styles.rightImage}></div>

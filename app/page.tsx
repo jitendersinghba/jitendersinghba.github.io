@@ -18,11 +18,12 @@ export default function Home() {
         <Intro />
       </section>
 
-      <section id="projects">
+      {/* ✅ Changed from id="projects" to id="philosophy" to match your nav link */}
+      <section id="philosophy">
         <Projects />
       </section>
 
-      {/* 🔥 Clean reusable Zipper Reveal */}
+      {/* 🔥 The non-negotiable layout zipper reveal */}
       <ZipperReveal />
 
       <section id="contact">
