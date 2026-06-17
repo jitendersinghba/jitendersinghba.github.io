@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jitender S. | Web Analyst",
+  title: "Jitender S. | SDR",
   icons: {
     icon: "/favicon.ico",
   },
